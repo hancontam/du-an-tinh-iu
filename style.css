@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", cursive;
+  background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  overflow: hidden;
+  perspective: 1000px;
+}
+#gift-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60vmin;
+  height: 60vmin;
+  max-width: 300px;
+  max-height: 300px;
+  background-size: cover;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#open-btn {
+  width: 100%;
+  height: 100%;
+  background-image: url("button.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+#open-btn:hover {
+  transform: scale(1.1);
+}
+#letter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 600px;
+  padding: 15px;
+  background: transparent;
+  font-size: 2vmin;
+  color: rgb(143, 14, 14);
+  text-align: left;
+  z-index: 15;
+  display: none;
+  line-height: 1.5;
+  font-family: "Cormorant", cursive;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+#lyrics {
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background: transparent;
+  color: #62274f;
+  font-size: 5vmin;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 16;
+  padding-top: 10vh;
+  font-family: "Unbounded", cursive;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100% !important;
+  height: 100% !important;
+}
+.fade-in {
+  animation: fadeIn 0.5s ease-in forwards;
+}
+.fade-out {
+  animation: fadeOut 0.5s ease-out forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+/* Media query for iPhone XS Max and iPhone 8 Plus (414px) */
+@media only screen and (max-width: 414px) {
+  #gift-box {
+    width: 50vmin;
+    height: 50vmin;
+    max-width: 250px;
+    max-height: 250px;
+  }
+  #letter {
+    font-size: 3.5vmin; /* Slightly smaller font for better fit */
+    padding: 10px;
+  }
+  #lyrics {
+    font-size: 3.5vmin;
+    padding-top: 15vh; /* Adjust for shorter screens like iPhone 8 Plus */
+  }
+}
+
+/* Media query for iPhone 12 Pro Max (428px) */
+@media only screen and (min-width: 415px) and (max-width: 428px) {
+  #gift-box {
+    width: 55vmin;
+    height: 55vmin;
+    max-width: 280px;
+    max-height: 280px;
+  }
+  #letter {
+    font-size: 4vmin;
+    padding: 12px;
+  }
+  #lyrics {
+    font-size: 4vmin;
+    padding-top: 12vh;
+  }
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.signature {
+  font-family: "Nunito", cursive;
+  font-size: 15px;
+  color: #8d8585;
+  opacity: 0.8;
+}
