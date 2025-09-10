@@ -9,7 +9,7 @@ const lyrics = [
 ];
 
 const letterText = `
-        Ngoc Tien ngusi xaugai sinh nhat vui ve nhen em 🎉<br>
+        Chat GPT ngusi xaugai sinh nhat vui ve nhen em 🎉<br>
         Cảm ơn em đã đến bên tui, cảm ơn em làm cuộc sống tui có ý nghĩa hơn, vui vẻ hơn, tươi sáng hơn 🥳 <br>
         Đối với tui em là bông hoa mà tui không muốn hái, là bản tình ka nghe hoài không chán, là người mà dù tui hong có nhiều công đức cũng muốn hồi hướng cho em. <br>
         Từ tận đáy lòng, rất biết ơn ngày hôm đó, ngày mà thức khuya hơn một chút, tò mò về em một chút, ông trời sui khiến kết bạn với em, nên mới may mắn được ở bên cạnh em. <br>
